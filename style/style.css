@@ -7,7 +7,8 @@
 }
 
 body {
-    background-color: #E7E7E7;
+    height: 100vh;
+    background-color: #ffffff;
 }
 
 .header {
@@ -20,7 +21,8 @@ body {
     font-style: normal;
     font-size: 14px;
     line-height: 1.6;
-    letter-spacing: 36%;
+    letter-spacing: 10px;
+    cursor: default;
 }
 
 .cart {
@@ -53,7 +55,7 @@ body {
     text-decoration: none;
     padding: 0px 15px;
     transition: color 0.3s ease-in-out;
-    letter-spacing: 36%;
+    letter-spacing: 5px;
 }
 
 .navigation-bar a:hover {
@@ -79,7 +81,7 @@ body {
     font-weight: 600;
     font-style: normal;
     font-size: 20px;
-    letter-spacing: 36%;
+    letter-spacing: 10px;
 }
 
 .advertisement-carousel h3 {
@@ -88,13 +90,14 @@ body {
     font-weight: 600;
     font-style: normal;
     font-size: 16px;
-    letter-spacing: 36%;
+    letter-spacing: 3px;
 }
 
 .carousel-container {
     width: 1596px;
     height: 510px;
-    margin: 0 auto;
+    margin-left: 162px;
+    margin-right: 162px;
     overflow: hidden;
     position: relative;
 }
@@ -156,17 +159,42 @@ body {
 }
 
 .sale-products {
-    background-color: #E7E7E7;
-    text-align: left;
-    left: 40%;
-}
-
-.sale-products h2{
-    padding: 40px;
     font-family: "Instrument Sans", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 20px;
-    letter-spacing: 36%;
+    padding-left: 0;
+    margin-left: 162px;
+    margin-right: 162px;
 }
 
+.sale-products h2{
+    padding-top: 20px;
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+
+.sale-products-table-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sale-products-table {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-color: white;
+    color: #343434;
+    cursor: default;
+}
+
+.sale-products-table h3 {
+    font-size: xx-medium;
+    padding-left: 24px ;
+    padding-bottom: 12px;
+}
+
+.products-images {
+    width: 365px;
+    height: 500px;
+    cursor: pointer;
+    padding-bottom: 20px
+}
