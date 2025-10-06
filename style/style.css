@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Irish+Grover&display=swap');
 
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -155,7 +155,7 @@ body {
 }
 
 .dot.active {
-    background: #333;
+    background: #343434;
 }
 
 .sale-products {
@@ -197,4 +197,282 @@ body {
     height: 500px;
     cursor: pointer;
     padding-bottom: 20px
+}
+
+.see-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 57px;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #343434;
+}
+
+.text-content {
+    font-family: "Instrument Sans", sans-serif;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #343434;
+}
+
+.arrows {
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.subscribe-card {
+    background-color: #ebebeb;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 57px;
+}
+
+.text-content h5 {
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: normal;
+    color: #666666;
+}
+
+.subscribe-card-form {
+    display: flex;
+    gap: 28px;
+}
+
+.subscribe-card-input {
+    padding: 10px;
+    border: 1px solid #4b4b4b;
+    font-size: 14px;
+    width: 396px;
+    font-family: "Instrument Sans", sans-serif;
+    outline: none;
+}
+
+.subscribe-card-button {
+    font-family: "Instrument Sans", sans-serif;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4b4b4b;
+    border: none;
+    color: #f1f1f1;
+    font-weight: 600;
+    font-size: 14px;
+    width: 124px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.subscribe-card-button:hover {
+    background-color: #666666;
+}
+
+.advertisement-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  font-family: "Inknut Antiqua", serif;
+  padding: 50px 0;
+}
+
+/* Texto intercalado */
+.text-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 20px 10px; /* linha x coluna */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.left-column h2 {
+  margin: 0;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: 600;
+}
+
+.right-column h2,
+.right-column h1 {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 10px;
+  font-weight: 600;
+}
+
+.right-column h2 {
+  font-size: 24px;
+  font-family: "Irish Grover", system-ui;
+}
+
+.right-column h1 {
+  font-size: 44px;
+  font-family: "Irish Grover", system-ui;
+}
+
+/* Posicionamento das palavras */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  grid-row: 1 / span 1;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 60px; /* para criar o efeito de intercalado */
+  grid-row: 1 / span 3;
+}
+
+/* Imagens */
+.image-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.advertisement-image {
+  object-fit: cover;
+  display: block;
+}
+
+.advertisement-image.large {
+  width: 1596px;
+  height: 510px;
+}
+
+.small-images {
+  display: flex;
+  justify-content: center;
+  gap: 102px;
+}
+
+.advertisement-image.small {
+  width: 750px;
+  height: 350px;
+}
+
+.site-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 40px 30px; /* padding lateral reduzido */
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column:first-child {
+  flex: 2;
+}
+
+.brand {
+  font-family: "Inknut Antiqua", serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 10px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #aaa;
+  max-width: 500px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-column h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-bottom hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin-bottom: 12px;
 }
