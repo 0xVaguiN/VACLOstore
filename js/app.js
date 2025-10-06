@@ -29,3 +29,15 @@ dots.forEach((dot, i) => {
 setInterval(() => {
   showSlide(index + 1);
 }, 5000);
+
+const subscribeForm = document.querySelector(".subscribe-card-button");
+const emailInput = document.querySelector(".subscribe-card-input");
+const successMessage = document.querySelector(".success-message");
+
+subscribeForm.addEventListener("click", function() {
+   emailInput.value = "";
+   successMessage.style.display = "block";
+    setTimeout(() => {
+        successMessage.style.display = "none";
+    }, 5000);
+});

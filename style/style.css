@@ -199,6 +199,64 @@ body {
     padding-bottom: 20px
 }
 
+.image-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    width: 365px;
+    height: 500px;
+    cursor: pointer;
+    padding-bottom: 20px
+}
+
+/* A camada que aparece no hover */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); /* escurece a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.2); /* leve zoom na imagem */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* aparece o overlay */
+}
+
+/* Botões dentro do overlay */
+.btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 8px 16px;
+    margin: 6px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 .see-more {
     display: flex;
     align-items: center;
@@ -273,6 +331,13 @@ body {
 
 .subscribe-card-button:hover {
     background-color: #666666;
+}
+
+.success-message {
+    display: none;
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
 }
 
 .advertisement-block {
@@ -372,16 +437,15 @@ body {
 .site-footer {
   background-color: #222;
   color: #ccc;
-  padding: 60px 40px 30px; /* padding lateral reduzido */
-  font-family: 'Inter', sans-serif;
+  padding: 0;
+  font-family: 'Instrument Sans', sans-serif;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-left: 145px;
   gap: 40px;
 }
 
@@ -398,9 +462,11 @@ body {
   font-family: "Inknut Antiqua", serif;
   font-size: 20px;
   font-weight: 600;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   color: #fff;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  margin-top: 25px;
+  line-height: 1.2;
 }
 
 .description {
@@ -433,6 +499,8 @@ body {
   font-size: 16px;
   margin-bottom: 12px;
   font-weight: 600;
+  line-height: 1.2;
+  margin-top: 25px;
 }
 
 .footer-links {
@@ -442,7 +510,7 @@ body {
 }
 
 .footer-links li {
-  margin-bottom: 8px;
+  margin-bottom: 1px;
 }
 
 .footer-links a {
@@ -464,8 +532,10 @@ address {
 }
 
 .footer-bottom {
-  max-width: 1200px;
-  margin: 40px auto 0;
+  margin-top: 25px;
+  margin-left: 145px;
+  margin-right: 145px;
+  padding-bottom: 12px;
   text-align: center;
   font-size: 13px;
   color: #888;
@@ -476,3 +546,4 @@ address {
   border-top: 1px solid #444;
   margin-bottom: 12px;
 }
+
