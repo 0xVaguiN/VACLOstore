@@ -37,3 +37,86 @@ subscribeForm.addEventListener("click", function() {
         successMessage.style.display = "none";
     }, 5000);
 });
+
+
+const cartMenu = document.getElementById('cart-menu');
+const closeCart = document.getElementById('close-cart');
+const goBack = document.getElementById('go-back');
+const overlay = document.getElementById('overlay');
+const cartItemsContainer = document.getElementById('cart-items');
+const cartTotal = document.getElementById('cart-total');
+const cartIcon = document.querySelectorAll('.cart');
+
+let cart = [];
+
+
+cartIcon.addEventListener('click', () => {
+  cartMenu.classList.add('active');
+  overlay.classList.add('active');
+});
+
+closeCart.addEventListener('click', () => {
+  cartMenu.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
+goBack.addEventListener('click', () => {
+  cartMenu.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
+overlay.addEventListener('click', () => {
+  cartMenu.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
+
+function addToCart(name, price) {
+  const item = cart.find(i => i.name === name);
+  if (item) {
+    item.qty++;
+  } else {
+    cart.push({ name, price, qty: 1 });
+  }
+  updateCart();
+
+
+  cartMenu.classList.add('active');
+  overlay.classList.add('active');
+}
+
+
+function updateCart() {
+  cartItemsContainer.innerHTML = '';
+  let total = 0;
+
+  cart.forEach(item => {
+    total += item.price * item.qty;
+
+    const div = document.createElement('div');
+    div.classList.add('cart-item');
+    div.innerHTML = `
+      <span>${item.name}</span>
+      <div>
+        <button onclick="changeQty('${item.name}', -1)">−</button>
+        <span>${item.qty}</span>
+        <button onclick="changeQty('${item.name}', 1)">+</button>
+      </div>
+      <span>R$ ${(item.price * item.qty).toFixed(2)}</span>
+    `;
+    cartItemsContainer.appendChild(div);
+  });
+
+  cartTotal.textContent = total.toFixed(2);
+}
+
+function changeQty(name, amount) {
+  const item = cart.find(i => i.name === name);
+  if (item) {
+    item.qty += amount;
+    if (item.qty <= 0) {
+      cart = cart.filter(i => i.name !== name);
+    }
+  }
+  updateCart();
+}
